@@ -1,0 +1,359 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cormorant', serif;
+}
+
+body {
+  color: #000022;
+  background-color: #f7f6f3
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  background: #ddd;
+  color: #000022;
+  border: none;
+  margin: 5px auto;
+  padding: 1% 5%;
+  border-radius: 1em;
+}
+
+::-webkit-input-placeholder {
+  color: #001242;
+}
+
+input[type='submit'] {
+  width: auto;
+  padding: 2% 5%;
+  margin: 5% auto;
+  color: #000022;
+  border-radius: 1em;
+}
+
+.title {
+  flex-basis: 100%;
+  color: #0094C6;
+  text-align: center;
+}
+
+.nav > ul > li {
+  display: none;
+  padding: 1% 2%;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.nav > ul > li:first-of-type {
+  display: block;
+  text-align: center;
+}
+
+.nav:hover li {
+  display: block;
+  height: auto;
+}
+
+
+.nav {
+  display: none;
+  width: 100%;
+  min-height: 50px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  background-color: #005E7C;
+  color: #F7F6F3;
+  position: fixed;
+}
+
+.nav ul {
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  padding: 0 5%;
+}
+
+.nav .name {
+  flex-grow: 4;
+  text-align: left;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  font-family: 'Cinzel', serif;
+}
+
+.nav li:hover {
+  text-decoration: underline;
+}
+
+.section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 5%;
+  padding-top: 10vh;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home {
+  position: relative;
+  background-color: rgba(50,50,100, 0.2);
+  height: 50%;
+}
+
+.home .photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  padding-bottom: 67%;
+  background-image: url(http://media.nbcbayarea.com/images/1200*675/BOST_000000004125362.JPG?ak=bc);
+  background-size: cover;
+}
+
+.home .name {
+  position: absolute;
+  text-align: center;
+  width: auto;;
+  top: 30vw;
+  color: white;
+}
+
+.home .name * {
+  font-family: 'Cinzel', serif;
+}
+
+.about img {
+  border-radius: 50%;
+  height: 15em;
+  width: auto;
+  object-fit: scale-down;
+  margin: 2% auto;
+  flex-basis: 100%;
+}
+
+.bio {
+  padding: 0.25em 0;
+  text-indent: 2em;
+  flex-basis: 100%;
+}
+
+.bio:first-of-type {
+  text-indent: 0;
+}
+
+.bio:first-of-type::first-letter {
+  font-size: 5em;
+  float: left;
+  margin: -0.3em 0.1em -0.3em 0;
+  color: #0094C6;
+}
+
+.event, .workHistory, .education {
+  padding: 2% 5%;
+  color: #1B2F33;
+}
+
+.subtitle {
+  margin: 2% auto 1% auto;
+  text-transform: capitalize;
+}
+
+.event .subtitle {
+  color: #0094C6;
+  border-bottom: 2px solid #0094C6;
+}
+
+.resume .subtitle {
+  font-size: 1.4em;
+}
+
+.eventDescription {
+  margin-top: 2%;
+}
+
+.date, .location, .company, .employed {
+  letter-spacing: 1px;
+  font-size: 1.2em;
+  color: #001242;
+  display: inline-block;
+}
+
+.location + .date, .company + .location, .location + .employed  {
+  padding-left: 1.5em;
+  border-left: 2px solid #0094C6;
+}
+
+.location, .company {
+  padding-right: 1.5em;
+}
+
+.resumeTitle {
+  border-bottom: 2px solid;
+}
+
+.position {
+  padding-bottom: 2%;
+}
+
+.positionDescription {
+  padding-top: 1%;
+}
+
+.contact {
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.contactForm {
+  order: 1;
+  width: 400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.social i {
+  margin: 5px 20px;
+  margin-left: 0;
+  width: 1em;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.social {
+  order: 2;
+  height: 70%;
+  width: 100%;
+  display: flex;
+  margin: 5% auto;
+  flex-wrap: wrap;
+}
+
+.social h3 {
+  flex-basis: 100%;
+  flex-grow: 4;
+  text-align: center;
+}
+
+.icon {
+  flex-basis: 25%;
+  flex-grow: 1;
+}
+
+.contact h3 {
+  margin: 10px 0;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+.display {
+  display: flex;
+}
+
+.homeNav {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 65vw;
+  background-color: #234;
+  margin: 0;
+  padding: 0;
+}
+
+.homeNav>ul>li {
+  display: block;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav, .nav ul {
+    flex-direction: row;
+    height: 50px;
+  }
+
+  .nav > ul > li {
+    width: auto;
+    display: inline-block;
+  }
+
+  .home {
+    height: 100vh;
+  }
+
+  .home .photo {
+    height: 100vh;
+    padding-bottom: 0;
+  }
+
+  .home .name {
+    right: 100px;
+    top: auto;
+  }
+
+  .display .about {
+    display: block;
+  }
+
+  .about img {
+    float: left;
+    margin: 2%;
+    margin-left: 0;
+  }
+
+  .about .title {
+    margin: 2% 0;
+  }
+
+  .bio:first-of-type {
+    margin-top: 3em;
+  }
+
+  .contact {
+    padding: 2% 10%;
+    padding-bottom: 0;
+    flex-direction: row;
+  }
+
+  .social {
+    margin: 0;
+    width: 30%;
+    align-items: flex-start;
+    order: 1;
+    flex-direction: column;
+  }
+
+  .icon {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .contactForm {
+    order: 2;
+  }
+
+  .homeNav {
+    top: 80%;
+    padding: 2% 0;
+    background-color: rgba(50,50,100, 0.5);
+    font-size: 1.2em;
+  }
+
+  .homeNav li:hover {
+    height: 100%;
+    background-color: rgba(50,50,100, 0.9);
+  }
+}
